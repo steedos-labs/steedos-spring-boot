@@ -23,7 +23,17 @@ The Windows Service creates a Moleculer Node that can be connected to another **
 - Creating a WAR from the finished project (Servlet-based runtime)
 - Run code without any changes in "standalone mode" (Netty-based runtime)
 
-## Run in Gitpod
+## Run Steedos Platform
+
+使用 docker 启动 Steedos Platform
+
+```
+cd steedos-platform
+docker-compose up
+```
+
+
+## Run Java
 
 ```sh
 sdk install java 8.0.382-zulu
@@ -31,6 +41,23 @@ chmod 777 gradlew
 ./gradlew jar
 ./gradlew copyLibs
 java  -classpath "./build/libs/*" services.moleculer.config.MoleculerRunner my.application.MoleculerApplication
+```
+
+
+## Run Moleculer Repl 
+
+使用 nodejs 启动 moleculer 调试控制台
+
+```
+cd steedos-platform
+yarn
+yarn repl
+```
+
+在控制台输入命令，可以查看 services清单
+
+```
+services
 ```
 
 ### Download binaries for testing ###
