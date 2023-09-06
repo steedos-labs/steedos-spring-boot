@@ -1,7 +1,7 @@
-## Moleculer Java Demo Project
+## Steedos Java Demo Project
 
 The project demonstrates a possible design of a functioning
-[Moleculer](https://moleculer-java.github.io/site/)-based
+Moleculer-based
 web-application. The application is launched and configured by the SpringBoot Framework.
 The project can be easily imported into the Eclipse IDE.
 
@@ -23,7 +23,7 @@ The Windows Service creates a Moleculer Node that can be connected to another **
 - Creating a WAR from the finished project (Servlet-based runtime)
 - Run code without any changes in "standalone mode" (Netty-based runtime)
 
-## Run Steedos Platform
+### Run Steedos Platform
 
 使用 docker 启动 Steedos Platform
 
@@ -33,7 +33,7 @@ docker-compose up
 ```
 
 
-## Run Java
+### Run Java
 
 ```sh
 sdk install java 8.0.382-zulu
@@ -44,7 +44,7 @@ java  -classpath "./build/libs/*" services.moleculer.config.MoleculerRunner my.a
 ```
 
 
-## Run Moleculer Repl 
+### Run Moleculer Repl 
 
 使用 nodejs 启动 moleculer 调试控制台
 
