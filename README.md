@@ -23,6 +23,16 @@ The Windows Service creates a Moleculer Node that can be connected to another **
 - Creating a WAR from the finished project (Servlet-based runtime)
 - Run code without any changes in "standalone mode" (Netty-based runtime)
 
+## Run in Gitpod
+
+```sh
+sdk install java 8.0.382-zulu
+chmod 777 gradlew
+./gradlew jar
+./gradlew copyLibs
+java  -classpath "./build/libs/*" services.moleculer.config.MoleculerRunner my.application.MoleculerApplication
+```
+
 ### Download binaries for testing ###
 
 This web application can be deployed to Tomcat, JBoss, Glassfish, WebLogic:
@@ -177,6 +187,7 @@ which can be called by other (Java or Node.js) nodes.
 ## Moleculer Documentation
 
 [![Documentation](https://raw.githubusercontent.com/moleculer-java/site/master/docs/docs-button.png)](https://moleculer-java.github.io/site/introduction.html)
+
 
 ## License
 

@@ -1,0 +1,17 @@
+{
+  "name": "steedos-platform",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "repl": "moleculer-runner --repl"
+  },
+  "dependencies": {
+    "dotenv-flow": "^3.3.0",
+    "ioredis": "^5.3.2",
+    "moleculer": "^0.14.31",
+    "moleculer-repl": "^0.7.3",
+    "nats": "^2.16.0"
+  }
+}

@@ -42,6 +42,7 @@ import my.commands.HelloCommand;
 import services.moleculer.ServiceBroker;
 import services.moleculer.config.ServiceBrokerConfig;
 import services.moleculer.config.SpringRegistrator;
+import services.moleculer.transporter.NatsTransporter;
 import services.moleculer.jmx.JmxService;
 import services.moleculer.jmx.ObjectWatcher;
 import services.moleculer.repl.LocalRepl;
@@ -99,6 +100,8 @@ public class MoleculerApplication {
 		// Configure Service Broker
 		ServiceBrokerConfig cfg = new ServiceBrokerConfig();
 
+		cfg.setNamespace("steedos");
+
 		// Define the underlaying JSON implementations (eg. "jackson", "boon",
 		// "builtin", "gson", "fastjson", "genson", etc.)
 		// See https://github.com/berkesa/datatree-adapters
@@ -106,7 +109,7 @@ public class MoleculerApplication {
 		cfg.setJsonWriters("jackson");
 
 		// Define Transporter to connect other nodes
-		// cfg.setTransporter(new RedisTransporter("redis://host"));
+		cfg.setTransporter(new NatsTransporter("nats://127.0.0.1"));
 
 		// Supported servers:
 		// - Redis Server
