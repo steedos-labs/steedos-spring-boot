@@ -152,6 +152,11 @@ public class MoleculerApplication {
 
 		// --- CONFIGURE ROUTES AND MIDDLEWARES ---
 
+		Route steedosRoute = gateway.addRoute(new Route("/steedos"));
+		steedosRoute.addToWhiteList("rest/*");
+		steedosRoute.addToWhiteList("objectql/*");
+		steedosRoute.addToWhiteList("api/*");
+
 		// Create route for REST services
 		Route restRoute = gateway.addRoute(new Route());
 

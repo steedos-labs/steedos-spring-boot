@@ -35,7 +35,9 @@ docker-compose up
 
 ### Run Java
 
-```sh
+启动 Java 项目，包含一个 API Gateway 和一些微服务。
+
+```sh 
 sdk install java 8.0.382-zulu
 chmod 777 gradlew
 ./gradlew jar
@@ -43,6 +45,10 @@ chmod 777 gradlew
 java  -classpath "./build/libs/*" services.moleculer.config.MoleculerRunner my.application.MoleculerApplication
 ```
 
+访问 Java API Gateway
+
+- 主页： http://localhost:3000/
+- Steedos REST API: http://localhost:3000/steedos/rest/find?objectName=space_users
 
 ### Run Moleculer Repl 
 
